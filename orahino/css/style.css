@@ -1,0 +1,344 @@
+/* подключаемые шрифты */
+@font-face {
+    font-family: 'Lemon';
+    src: local('fonts/Lemon Regular'), local('Lemon-Regular'),
+        url('../fonts/Lemon-Regular.woff2') format('woff2'),
+        url('../fonts/Lemon-Regular.woff') format('woff'),
+        url('../fonts/Lemon-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --whitecolors: #ffffff;
+    --brandcolor: #FF5700;
+    --brandcolorlight: #FF8445;
+    --brandcolordark: #A13700;
+    --brandfont: 'Lemon';
+    --Roboto: 'Roboto', sans-serif;
+    --RobotoMono: 'Roboto Mono', monospace;
+    --RobotoSlab: 'Roboto Slab', serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--RobotoSlab);
+    font-size: 16px;
+    
+}
+
+a {
+    text-decoration: none;
+    display: block;
+
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1266px;
+    margin: 0 auto;
+}
+
+.header-flex {
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+    min-height: 35px;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+
+.header-logo {
+    flex-basis: auto;
+    background-image: url(../images/logo.svg);
+    background-repeat: no-repeat;
+    padding: 0px 0 0 75px;
+    background-position: 0 0;
+    font-family: var(--brandfont);
+    font-style: normal;
+    background-size: 66px;
+    width: 50%;
+
+}
+
+.name a {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: var(--brandcolor);
+}
+
+.slogan {
+    font-size: 14px;
+    color: var(--brandcolor);
+    text-transform: uppercase;
+    font-family: var(--RobotoSlab);
+}
+
+.header-phone {
+    font-family: var(--RobotoMono);
+    color: var(--brandcolor);
+    font-size: 24px;
+}
+
+.header-phone span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.header-menu {
+    width: 50px;
+    min-height: 50px;
+    background-image: url(../images/menu.svg);
+    background-size: contain;
+    cursor: pointer;
+}
+
+.header-line {
+    min-height: 60px;
+    background: var(--brandcolor);
+    box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.25);
+
+}
+
+.header-line_flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+
+}
+
+.header-line_flex a {
+    padding: 10px 20px;
+    font-family: var(--RobotoSlab);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--whitecolors);
+}
+
+.header-line_flex a:hover,
+.current_page_item a {
+    background: var(--brandcolorlight);
+    padding: 10px 20px;
+}
+
+.header-background {
+    background-image: url(../images/nuts.svg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+
+
+}
+.site-content{
+    min-height: 100vh;
+}
+
+.content-flex {
+    display: flex;
+    align-items: center;
+    color: var(--whitecolors);
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    min-height: 610px;
+
+}
+
+.content-flex h1 {
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.content-flex h1>span {
+    color: var(--brandcolorlight);
+}
+
+.content-slogan {
+    color: var(--whitecolors);
+    font-size: 18px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-family: var(--Roboto);
+}
+
+.content-button {
+    text-align: center;
+    color: var(--whitecolors);
+    background: var(--brandcolor);
+    box-shadow: 5px 10px 0 var(--brandcolordark);
+    padding: 25px 20px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    width: 350px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.catalog-name {
+    font-family: var(--RobotoSlab);
+    font-weight: bold;
+    font-size: 50px;
+    color: var(--brandcolor);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.card-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #EFEFEF;
+    box-shadow: 200px 0px rgba(255, 132, 69, 0.2), 10px 10px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+
+
+}
+
+.card:last-child {
+    box-shadow: 0 0 rgba(0, 0, 0, 0.2), 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 220px;
+    flex-direction: column;
+}
+
+.brand-name {
+    color: var(--brandcolor);
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: var(--RobotoSlab);
+    font-style: normal;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+}
+
+.brand-description {
+    color: var(--brandcolor);
+    font-size: 21px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.pistachio {
+    background-image: url("../images/hotpng12.svg");
+    background-position: 50% -10px, 100px 100px;
+    background-repeat: no-repeat;
+    background-size: 250px;
+    height: 250px;
+}
+
+.walnut {
+    background: url("../images/neworeh.svg") 60% 20px no-repeat;
+    background-size: 220px;
+    height: 250px;
+}
+
+.hazelnut {
+    background: url("../images/hotpng11.svg") 60% -20px no-repeat;
+    background-size: 250px;
+    height: 250px;
+}
+
+.card-description {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+
+}
+
+.card-description_item {
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    border: 1px solid var(--brandcolor);
+    border-radius: 10px;
+}
+
+.name-product {
+    padding: 10px;
+    border-bottom: 1px solid var(--brandcolor);
+    width: 200px;
+    margin: 0 auto;
+    font-family: var(--RobotoSlab);
+    text-transform: uppercase;
+    color: var(--brandcolor);
+}
+
+.substitute {
+    padding: 20px;
+    text-transform: uppercase;
+    color: var(--brandcolor);
+
+}
+
+.substitute+p {
+    color: var(--brandcolor);
+    margin-bottom: 30px;
+}
+
+.card-button {
+    border: 1px solid var(--brandcolorlight);
+    padding: 20px;
+    text-transform: uppercase;
+    display: inline-block;
+    background: var(--brandcolor);
+    color: var(--whitecolors);
+    border-radius: 10px;
+    box-shadow: 3px 3px var(--brandcolorlight);
+    font-size: 14px;
+}
+
+.content h2 {
+    border-bottom: 3px solid var(--brandcolor);
+    padding: 10px 0;
+    color: var(--brandcolor);
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.footer {
+    background-size: 100%;
+    min-height: 300px;
+    background: lightblue;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 300px;
+
+}
